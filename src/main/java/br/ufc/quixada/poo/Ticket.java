@@ -31,14 +31,12 @@ public class Ticket {
   }
 
   private void calcularValor(Duration duracao) {
-    valorPago = veiculo.calcularValor(duracao);
+    valorPago = veiculo.calcularValor(duracao.toMinutes());
   }
 
-  public boolean registrarSaida(LocalDateTime horaDeSaida) {
+  public void registrarSaida(LocalDateTime horaDeSaida) {
     calcularValor(Duration.between(horaEntrada, horaDeSaida));
 
     pago = true;
-
-    return true;
   }
 }

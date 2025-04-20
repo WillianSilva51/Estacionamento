@@ -50,10 +50,10 @@ public class Estacionamento {
       return false;
     }
 
-    if (veiculo instanceof Carro)
+    if (veiculo.tipoVaga.equals(TipoVaga.CARRO))
       return estacionarCarro(veiculo);
 
-    else if (veiculo instanceof Moto || veiculo instanceof Bike)
+    else if (veiculo.tipoVaga.equals(TipoVaga.MOTO_E_BIKE))
       return estacionarMotoBike(veiculo);
 
     System.out.println("Tipo de veículo inválido.");
@@ -61,7 +61,7 @@ public class Estacionamento {
   }
 
   public void ajustarVagas(Ticket ticket) {
-    if (ticket.getVeiculo() instanceof Carro) {
+    if (ticket.getVeiculo().tipoVaga.equals(TipoVaga.CARRO)) {
       vagasCarro++;
     } else {
       vagasMotoBike++;

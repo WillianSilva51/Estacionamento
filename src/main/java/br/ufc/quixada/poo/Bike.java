@@ -1,14 +1,13 @@
 package br.ufc.quixada.poo;
 
-import java.time.Duration;
-
 public class Bike extends Veiculo {
 
   public Bike(String id) {
     super(id);
+    tipoVaga = TipoVaga.MOTO_E_BIKE;
   }
 
-  public double calcularValor(Duration duration) {
+  public double calcularValor(Long duration) {
     return 3;
   }
 }

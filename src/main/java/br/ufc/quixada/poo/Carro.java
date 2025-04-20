@@ -1,14 +1,12 @@
 package br.ufc.quixada.poo;
 
-import java.time.Duration;
-
 public class Carro extends Veiculo {
 
   public Carro(String id) {
     super(id);
   }
 
-  public double calcularValor(Duration duration) {
-    return Math.max(duration.toMinutes() * 0.1, 5);
+  public double calcularValor(Long duration) {
+    return Math.max(duration * 0.1, 5);
   }
 }
