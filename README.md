@@ -1,4 +1,4 @@
-# **:parking:** Sistema de Gerenciamento de Estacionamento com Herança
+# :parking: Sistema de Gerenciamento de Estacionamento com Herança
 
 ---
 
